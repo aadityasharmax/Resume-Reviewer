@@ -1,19 +1,18 @@
 import React, { useState } from "react";
+import Typewriter from "typewriter-effect";
 
-// Import components from src/components
-import CSVUpload from "./components/CSVUpload/CSVUpload.jsx";
-import JDFileUpload from "./components/JDFileUpload/JDFileUpload.jsx";
-import ProgressTracker from "./components/ProgressTracker/ProgressTracker.jsx";
-import DownloadButton from "./components/DownloadButton/DownloadButton.jsx";
-// import "./App.css";
+import CSVUpload from "./components/CSVUpload/CSVUpload";
+import JDFileUpload from "./components/JDFileUpload/JDFileUpload";
+import ProgressTracker from "./components/ProgressTracker/ProgressTracker";
+import DownloadButton from "./components/DownloadButton/DownloadButton";
+import "./App.css";
+import Features from "./components/Features/Features";
+import { div } from "motion/react-client";
+import { BiCopy } from "react-icons/bi";
+import { CgCopy } from "react-icons/cg";
+import { Steps } from "@chakra-ui/react"
 
 
-/* App function - Functionalities
-- Upload Csv File from CSVUpload from  JD File  Upload
-- Upload Jd in text format JD File Upload
-- Conditional rendering of download Button
-- Progress Tracker
-*/
 const App = () => {
   const [csvFile, setCsvFile] = useState(null);
   const [jdFile, setJDFile] = useState(null);
@@ -21,7 +20,13 @@ const App = () => {
   const [currentStudent, setCurrentStudent] = useState("");
   const [scanComplete, setScanComplete] = useState(false);
 
-  const studentEmails = ["student1@example.com", "student2@example.com", "student3@example.com"];
+  const studentEmails = [
+    "student1@example.com",
+    "student2@example.com",
+    "student3@example.com",
+    "student4@example.com",
+    "student5@example.com"
+  ];
 
   const startScan = () => {
     if (!csvFile || !jdFile) {
@@ -36,7 +41,7 @@ const App = () => {
     const interval = setInterval(() => {
       if (step < studentEmails.length) {
         setCurrentStudent(studentEmails[step]);
-        setProgress(((step + 1) / studentEmails.length) * 100);
+        setProgress(Math.floor(((step + 1) / studentEmails.length) * 100));
         step++;
       } else {
         clearInterval(interval);
@@ -44,20 +49,87 @@ const App = () => {
         setCurrentStudent("");
         setScanComplete(true);
       }
-    }, 1500);
+    }, 500);
   };
 
   return (
-    <div className="container">
-      <h2>Resume Scanner UI</h2>
-      <CSVUpload setCsvFile={setCsvFile} />
-      <JDFileUpload setJDFile={setJDFile} />
+    <div className="container p-10">
+      {/* <h2 className="text-6xl font-bold text-center mt-6 text-[#cccccc]">Hire Smarter, <span className="text-6xl text-red-400">Not</span> Harder</h2>*/}
+      <div className="typeriter text-5xl text-[#cccccc] text-center m-6">
+        <Typewriter
+          options={{
+            strings: [
+              "Smart Resume Scanner",
+              "AI-Powered Screening",
+              "Instant Matching",
+            ],
+            autoStart: true,
+            loop: true,
+            delay: 70,
+          }}
+        />
+      </div>
+      <h3 className="text-center text-2xl mt-6 text-[#7a7183]">
+        Use AI to filter, score, and shortlist the best candidates — all from a
+        single CSV.
+      </h3>
+      <Features />
+      
 
-      <button onClick={startScan}>Start Scan</button>
+      <div className=" flex flex-wrap ">
+        <div className="max-w-xl w-1/2 mx-auto py-10">
+          <h2 className="text-2xl text-blue-500 text-center mb-3 font-bold">
+            Step 1
+          </h2>
+          <h3 className="text-white text-center text-xl">✅Upload CSV </h3>
+          <p className="text-white text-center text-md m-4">
+            ( Upload a CSV file containing candidate emails and links to their
+            resumes)
+          </p>
 
-      <ProgressTracker progress={progress} currentStudent={currentStudent} />
+          <CSVUpload setCsvFile={setCsvFile} />
+        </div>
 
-      {scanComplete && <DownloadButton />}
+        <div className="max-w-xl w-1/2 mx-auto py-10">
+          <h2 className="text-2xl text-center mb-3 font-bold text-blue-500">
+            Step 2
+          </h2>
+          <h3 className="text-white text-center text-xl">
+            ✅Upload Job Description
+          </h3>
+          <p className="text-white text-center text-md m-4">
+            ( Upload the job description to match candidates against your hiring
+            needs)
+          </p>
+          <JDFileUpload setJDFile={setJDFile} />
+        </div>
+      </div>
+
+
+
+        <h2 className='text-blue-500 text-2xl font-bold text-center mb-4'>Step 3</h2>
+         <h3 className="text-white text-center text-xl">
+            ✅ Result Generation 
+          </h3>
+      <div className=''>
+        <div className="flex items-center flex-col">
+        <button
+        onClick={startScan}
+        className="text-white h-10 w-[160px] bg-blue-500 rounded-2xl hover:bg-purple-600"
+      >
+        Start Scan
+      </button>
+      </div>
+
+      <div className="flex justify-center">
+        <ProgressTracker progress={progress} currentStudent={currentStudent} />
+      </div>
+
+      {scanComplete && <div className="flex justify-center">
+        <DownloadButton />
+      </div> }
+      </div>
+      <footer className="text-sm text-white text-center mt-10 mb-2 ">© Resume Review AI 2025 All Rights Reserved</footer>
     </div>
   );
 };

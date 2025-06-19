@@ -1,0 +1,6 @@
+.text-area{
+    resize: none;
+    width: "300px";
+    height: "150px";
+    padding:10px;
+}

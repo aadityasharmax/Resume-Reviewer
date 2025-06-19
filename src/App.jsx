@@ -10,7 +10,6 @@ import Features from "./components/Features/Features";
 import { div } from "motion/react-client";
 import { BiCopy } from "react-icons/bi";
 import { CgCopy } from "react-icons/cg";
-import { Steps } from "@chakra-ui/react"
 
 
 const App = () => {

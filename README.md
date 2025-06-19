@@ -33,6 +33,7 @@ https://resume-reviewer-rust.vercel.app/
 <details>
 <summary><strong>📁 Project File Structure</strong></summary>
 
+```bash
 resume-scanner-ui/
 │
 ├── public/
@@ -61,7 +62,8 @@ resume-scanner-ui/
 ├── tailwind.config.js            
 ├── index.html
 ├── package.json
-└── README.md                     
+└── README.md
+```                    
 
 # Getting Started
 

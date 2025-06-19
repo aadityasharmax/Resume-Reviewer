@@ -1,9 +1,9 @@
-#🧠 AI Resume Scanner UI
+# 🧠 AI Resume Scanner UI
 
 This is a modern React-based front-end interface for an AI-powered Resume Scanning System. It allows recruiters or hiring managers to upload a list of candidate resumes via CSV, provide a Job Description (JD), and automatically match candidates based on the job requirements.
 The UI is interactive, responsive, and styled with Tailwind CSS, featuring animations and modern visuals.
 
-#🧾 Table of Contents
+# 🧾 Table of Contents
 📸 Live Demo
 🗂️ Project Features
 📁 File Structure

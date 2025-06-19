@@ -4,12 +4,12 @@ This is a modern React-based front-end interface for an AI-powered Resume Scanni
 The UI is interactive, responsive, and styled with Tailwind CSS, featuring animations and modern visuals.
 
 # 🧾 Table of Contents
-📸 Live Demo
-🗂️ Project Features
-📁 File Structure
-🚀 Getting Started
-🛠️ Technologies Used
-📦 Deployment
+📸 Live Demo  
+🗂️ Project Features  
+📁 File Structure  
+🚀 Getting Started  
+🛠️ Technologies Used  
+📦 Deployment  
 📌 Future Scope
 
 
@@ -20,18 +20,18 @@ https://resume-reviewer-rust.vercel.app/
 
 # 🗂️ Project Features
 
-📤 Upload CSV of candidate emails and resume links
-📝 Upload Job Description as a text file
-🔍 AI-matching interface simulation
-📊 Visual progress tracking during scanning
-📁 Download filtered and scored result as a CSV
-🎨 Clean, modern UI with Aurora animated background
-🖱️ Drag-and-drop file input support
+📤 Upload CSV of candidate emails and resume links  
+📝 Upload Job Description as a text file  
+🔍 AI-matching interface simulation  
+📊 Visual progress tracking during scanning  
+📁 Download filtered and scored result as a CSV  
+🎨 Clean, modern UI with Aurora animated background  
+🖱️ Drag-and-drop file input support  
 ⚡ Built with React + TailwindCSS
 
 
-<details>
-<summary><strong>📁 Project File Structure</strong></summary>
+
+# File Structure
 
 ```bash
 resume-scanner-ui/
@@ -51,9 +51,9 @@ resume-scanner-ui/
 │   │   ├── DownloadButton/
 │   │   │   └── DownloadButton.jsx  
 │   │   ├── Features/
-│   │   │   └── Features.jsx        
-│   │   └── ui/
-│   │       └── aurora-background.jsx # Animated background
+│   │      └── Features.jsx        
+│   │  
+│   │       
 │   │
 │   ├── App.jsx                     
 │   ├── App.css                   

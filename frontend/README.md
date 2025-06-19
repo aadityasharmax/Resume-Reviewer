@@ -34,7 +34,7 @@ https://resume-reviewer-rust.vercel.app/
 # File Structure
 
 ```bash
-resume-scanner-ui/
+frontend/
 │
 ├── public/
 │   └── assets/

@@ -29,37 +29,39 @@ https://resume-reviewer-rust.vercel.app/
 🖱️ Drag-and-drop file input support
 ⚡ Built with React + TailwindCSS
 
-# File Structure
+
+<details>
+<summary><strong>📁 Project File Structure</strong></summary>
 
 resume-scanner-ui/
 │
 ├── public/
 │   └── assets/
-│       └── new-bg.webp             # Background image
+│       └── new-bg.webp             
 │
 ├── src/
 │   ├── components/
 │   │   ├── CSVUpload/
-│   │   │   └── CSVUpload.jsx       # CSV file input
+│   │   │   └── CSVUpload.jsx       
 │   │   ├── JDFileUpload/
-│   │   │   └── JDFileUpload.jsx    # JD upload component
+│   │   │   └── JDFileUpload.jsx    
 │   │   ├── ProgressTracker/
-│   │   │   └── ProgressTracker.jsx # Shows scanning progress
+│   │   │   └── ProgressTracker.jsx 
 │   │   ├── DownloadButton/
-│   │   │   └── DownloadButton.jsx  # Handles result.csv download
+│   │   │   └── DownloadButton.jsx  
 │   │   ├── Features/
-│   │   │   └── Features.jsx        # Optional 3-step UI
+│   │   │   └── Features.jsx        
 │   │   └── ui/
 │   │       └── aurora-background.jsx # Animated background
 │   │
-│   ├── App.jsx                     # Main application logic
-│   ├── App.css                     # Additional styling
-│   └── main.jsx                    # Entry point
+│   ├── App.jsx                     
+│   ├── App.css                   
+│   └── main.jsx                 
 │
-├── tailwind.config.js             # Tailwind CSS config
+├── tailwind.config.js            
 ├── index.html
 ├── package.json
-└── README.md                      # You are here!
+└── README.md                     
 
 # Getting Started
 

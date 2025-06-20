@@ -57,7 +57,7 @@ const App = () => {
 return (
   <div className="container px-4 md:px-10 py-6">
 
-    // TypeWriter Effect
+{/*TypeWriter Effect*/}
     <div className="typeriter text-3xl sm:text-4xl md:text-5xl text-[#cccccc] text-center mb-6">
       <Typewriter
         options={{

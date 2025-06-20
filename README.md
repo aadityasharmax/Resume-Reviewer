@@ -15,7 +15,7 @@ The UI is interactive, responsive, and styled with Tailwind CSS, featuring anima
 
 
 # 📸 Live Demo
-https://resume-reviewer-rust.vercel.app/
+https://resume-reviewer-one.vercel.app/
 
 
 # 🗂️ Project Features
@@ -105,6 +105,7 @@ Step 4: View real-time progress and download final results as CSV
 # 🌐 Deployment
 
 Vercel
+https://resume-reviewer-one.vercel.app/
 
 
 # Future Scope

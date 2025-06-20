@@ -68,13 +68,14 @@ frontend/
 
 1. Clone the Repository
    ```
-   git clone https://github.com/your-username/resume-scanner-ui.git
-   cd resume-scanner-ui
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
 
    ```
 
 2. Install Dependencies
    ```
+   cd frontend
    npm install
 
    ```

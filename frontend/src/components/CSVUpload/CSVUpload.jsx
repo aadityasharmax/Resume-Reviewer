@@ -1,19 +1,3 @@
-// import React from 'react';
-
-// const CSVUpload = ({ setCsvFile }) => {
-//   const handleChange = (e) => {
-//     setCsvFile(e.target.files[0]);
-//   };
-
-//   return (
-//     <div className="upload-box border-dashed border-2 flex  items-center justify-center mt-20 bg-white text-rose-400">
-//       <h3>Upload CSV</h3>
-//       <input type="file" accept=".csv" onChange={handleChange}
-//       className='cursor-pointer ' />
-//     </div>
-//   );
-// };
-
 // export default CSVUpload;
 
 import React, { useState } from 'react';

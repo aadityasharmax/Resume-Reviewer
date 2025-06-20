@@ -69,7 +69,7 @@ const JDUpload = ({ setJDFile }) => {
           Drop your Text file here or <label htmlFor="JDInput" className="underline cursor-pointer">choose a file</label>.
         </p>
         <p className="text-white/80 text-sm">
-          CSV only. Max 2MB file size.
+          Text only. Max 2MB file size.
         </p>
         {fileName && <p className="text-green-300 text-sm mt-2">✅ {fileName} selected</p>}
         <input

@@ -77,9 +77,6 @@ const App = () => {
 
       <div className=" flex flex-wrap ">
         <div className="max-w-xl w-1/2 mx-auto py-10">
-          <h2 className="text-2xl text-blue-500 text-center mb-3 font-bold">
-            Step 1
-          </h2>
           <h3 className="text-white text-center text-xl">✅Upload CSV </h3>
           <p className="text-white text-center text-md m-4">
             ( Upload a CSV file containing candidate emails and links to their
@@ -90,9 +87,6 @@ const App = () => {
         </div>
 
         <div className="max-w-xl w-1/2 mx-auto py-10">
-          <h2 className="text-2xl text-center mb-3 font-bold text-blue-500">
-            Step 2
-          </h2>
           <h3 className="text-white text-center text-xl">
             ✅Upload Job Description
           </h3>
@@ -106,8 +100,8 @@ const App = () => {
 
 
 
-        <h2 className='text-blue-500 text-2xl font-bold text-center mb-4'>Step 3</h2>
-         <h3 className="text-white text-center text-xl">
+        
+         <h3 className="text-white text-center text-xl mt-5">
             ✅ Result Generation 
           </h3>
       <div className=''>

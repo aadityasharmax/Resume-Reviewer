@@ -1,5 +1,3 @@
-// export default CSVUpload;
-
 import React, { useState } from 'react';
 import { FaFileUpload } from 'react-icons/fa';
 
@@ -44,13 +42,11 @@ const CSVUpload = ({ setCsvFile }) => {
 
   // HTML return and styling
   return (
-    <div
-    //  onDragOver , onDragLeave , onDrop Function
+    <div  
       onDragOver={(e) => { e.preventDefault(); setDragActive(true); }}
       onDragLeave={() => setDragActive(false)}
       onDrop={handleDrop}
 
-      // Drag and Drop Styling
       className={`border-2 border-dashed rounded-lg  p-6 text-center transition-all duration-300 ${
         dragActive ? 'border-blue-400 bg-blue-50' : 'border-white/40 bg-purple-700'
       }`}

@@ -51,80 +51,84 @@ const App = () => {
     }, 500);
   };
 
-  return (
-    <div className="container p-10">
-      {/* <h2 className="text-6xl font-bold text-center mt-6 text-[#cccccc]">Hire Smarter, <span className="text-6xl text-red-400">Not</span> Harder</h2>*/}
-      <div className="typeriter text-5xl text-[#cccccc] text-center m-6">
-        <Typewriter
-          options={{
-            strings: [
-              "Smart Resume Scanner",
-              "AI-Powered Screening",
-              "Instant Matching",
-            ],
-            autoStart: true,
-            loop: true,
-            delay: 70,
-          }}
-        />
-      </div>
-      <h3 className="text-center text-2xl mt-6 text-[#7a7183]">
-        Use AI to filter, score, and shortlist the best candidates — all from a
-        single CSV.
-      </h3>
-      <Features />
-      
 
-      <div className=" flex flex-wrap ">
-        <div className="max-w-xl w-1/2 mx-auto py-10">
-          <h3 className="text-white text-center text-xl">✅Upload CSV </h3>
-          <p className="text-white text-center text-md m-4">
-            ( Upload a CSV file containing candidate emails and links to their
-            resumes)
-          </p>
 
-          <CSVUpload setCsvFile={setCsvFile} />
-        </div>
 
-        <div className="max-w-xl w-1/2 mx-auto py-10">
-          <h3 className="text-white text-center text-xl">
-            ✅Upload Job Description
-          </h3>
-          <p className="text-white text-center text-md m-4">
-            ( Upload the job description to match candidates against your hiring
-            needs)
-          </p>
-          <JDFileUpload setJDFile={setJDFile} />
-        </div>
+return (
+  <div className="container px-4 md:px-10 py-6">
+    <div className="typeriter text-3xl sm:text-4xl md:text-5xl text-[#cccccc] text-center mb-6">
+      <Typewriter
+        options={{
+          strings: [
+            "Smart Resume Scanner",
+            "AI-Powered Screening",
+            "Instant Matching",
+          ],
+          autoStart: true,
+          loop: true,
+          delay: 70,
+        }}
+      />
+    </div>
+
+    <h3 className="text-center text-md sm:text-xl md:text-2xl mt-4 text-[#7a7183]">
+      Use AI to filter, score, and shortlist the best candidates — all from a
+      single CSV.
+    </h3>
+
+    <Features />
+
+    {/* Upload Section */}
+    <div className="flex flex-col md:flex-row md:justify-center md:gap-8 mt-10">
+      {/* CSV Upload */}
+      <div className="w-full md:w-1/2 max-w-xl mx-auto py-6">
+        <h3 className="text-white text-center text-lg sm:text-xl">1️⃣ Upload CSV</h3>
+        <p className="text-white text-center text-sm sm:text-md m-4">
+          (Upload a CSV file containing candidate emails and resume links)
+        </p>
+        <CSVUpload setCsvFile={setCsvFile} />
       </div>
 
+      {/* JD Upload */}
+      <div className="w-full md:w-1/2 max-w-xl mx-auto py-6">
+        <h3 className="text-white text-center text-lg sm:text-xl">
+          2️⃣ Upload Job Description
+        </h3>
+        <p className="text-white text-center text-sm sm:text-md m-4">
+          (Upload the job description to match candidates with your hiring needs)
+        </p>
+        <JDFileUpload setJDFile={setJDFile} />
+      </div>
+    </div>
 
+    {/* Scan and Results */}
+    <h3 className="text-white text-center text-lg sm:text-xl mt-8">
+      3️⃣ Result Generation
+    </h3>
 
-        
-         <h3 className="text-white text-center text-xl mt-5">
-            ✅ Result Generation 
-          </h3>
-      <div className=''>
-        <div className="flex items-center flex-col">
-        <button
+    <div className="flex flex-col items-center mt-4 gap-6">
+      <button
         onClick={startScan}
-        className="text-white h-10 w-[160px] bg-blue-500 rounded-2xl hover:bg-purple-600"
+        className="text-white h-10 w-40 bg-blue-500 rounded-2xl hover:bg-purple-600"
       >
         Start Scan
       </button>
-      </div>
 
-      <div className="flex justify-center">
-        <ProgressTracker progress={progress} currentStudent={currentStudent} />
-      </div>
+      <ProgressTracker progress={progress} currentStudent={currentStudent} />
 
-      {scanComplete && <div className="flex justify-center">
-        <DownloadButton />
-      </div> }
-      </div>
-      <footer className="text-sm text-white text-center mt-10 mb-2 ">© Resume Review AI 2025 All Rights Reserved</footer>
+      {scanComplete && (
+        <div className="mt-4">
+          <DownloadButton />
+        </div>
+      )}
     </div>
-  );
-};
 
-export default App;
+    {/* Footer */}
+    <footer className="text-xs sm:text-sm text-white text-center mt-12 mb-2">
+      © Resume Review AI 2025 All Rights Reserved
+    </footer>
+  </div>
+)
+}
+
+export default App

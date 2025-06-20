@@ -40,10 +40,9 @@ const JDUpload = ({ setJDFile }) => {
     }
   };
 
-  // HTML return and styling
+  // Return Start
   return (
     <div
-    //  onDragOver , onDragLeave , onDrop Function
       onDragOver={(e) => { e.preventDefault(); setDragActive(true); }}
       onDragLeave={() => setDragActive(false)}
       onDrop={handleDrop}

@@ -58,8 +58,7 @@ frontend/
 │   ├── App.jsx                     
 │   ├── App.css                   
 │   └── main.jsx                 
-│
-├── tailwind.config.js            
+│            
 ├── index.html
 ├── package.json
 └── README.md

@@ -6,7 +6,7 @@ const DownloadButton = () => {
   // Function triggered on button click to download CSV
   const handleDownload = () => {
 
-    // 1. Create CSV data 
+    // Create CSV data 
     const csvContent = "data:text/csv;charset=utf-8,Email,Score\nstudent@example.com,85";
 
     

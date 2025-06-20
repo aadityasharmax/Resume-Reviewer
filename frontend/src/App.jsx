@@ -56,6 +56,8 @@ const App = () => {
 
 return (
   <div className="container px-4 md:px-10 py-6">
+
+    // TypeWriter Effect
     <div className="typeriter text-3xl sm:text-4xl md:text-5xl text-[#cccccc] text-center mb-6">
       <Typewriter
         options={{
@@ -80,6 +82,8 @@ return (
 
     {/* Upload Section */}
     <div className="flex flex-col md:flex-row md:justify-center md:gap-8 mt-10">
+
+      
       {/* CSV Upload */}
       <div className="w-full md:w-1/2 max-w-xl mx-auto py-6">
         <h3 className="text-white text-center text-lg sm:text-xl">1️⃣ Upload CSV</h3>
@@ -88,6 +92,8 @@ return (
         </p>
         <CSVUpload setCsvFile={setCsvFile} />
       </div>
+
+      
 
       {/* JD Upload */}
       <div className="w-full md:w-1/2 max-w-xl mx-auto py-6">
@@ -101,6 +107,8 @@ return (
       </div>
     </div>
 
+
+    
     {/* Scan and Results */}
     <h3 className="text-white text-center text-lg sm:text-xl mt-8">
       3️⃣ Result Generation
@@ -122,6 +130,8 @@ return (
         </div>
       )}
     </div>
+
+    
 
     {/* Footer */}
     <footer className="text-xs sm:text-sm text-white text-center mt-12 mb-2">
